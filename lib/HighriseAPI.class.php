@@ -474,13 +474,13 @@ require_once('HighriseWebAddress.class.php');
 		
 		public function findPeopleSinceTime($time)
 		{
-			$url = "/people/search.xml?since=" . urlencode($time);
+			$url = "/people.xml?since=" . urlencode($time);
 			return $this->parseListing($url);
 		}
 
 		public function findCompaniesSinceTime($time)
 		{
-			$url = "/companies/search.xml?since=" . urlencode($time);
+			$url = "/companies.xml?since=" . urlencode($time);
 			return $this->parseListing($url, undef, "company");
 		}
 
